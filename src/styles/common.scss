@@ -1,0 +1,118 @@
+.primary-nav {
+    background-color: rgba(253, 253, 253, 0.95);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+    display: flex;
+    .logo {
+    	display: flex;
+    	img {
+    		width: 36px;
+    		height: 36px;
+    		display: block;
+    		flex-shrink: 0;
+    	}
+	    h1 {
+	    	flex-grow: 1;
+	    	color: #168A94;
+	    	font-size: 28px;
+	    	line-height: 36px;
+	    	margin: 0;
+	    	padding: 3px 10px;
+	    }
+	}
+    .actions {
+    	flex-grow: 1;
+    	display: flex;
+    	justify-content: flex-end;
+    	a {
+    		font-size: 18px;
+    		color: #31adb8;
+    		padding: 8px;
+    		&:hover {
+    			background: #EEE;
+    		}
+    	}
+    }
+}
+
+.panel {
+	margin: 13px 10px;
+	border: #EEE 1px solid;
+	border-radius: 2px;
+	background: #FFFFFF;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 0 0 60px 0;
+	h2 {
+		color: #666;
+		margin: 0;
+		padding: 10px;
+	}
+	p {
+		padding: 0 10px;
+		margin: 5px 0;
+	}
+	textarea {
+		margin: 10px;
+		border-radius: 2px;
+		display: block;
+		width: 90%;
+		width: calc(100% - 26px);
+		height: 200px;
+	}
+	table {
+	    border-collapse: collapse;
+    	border-spacing: 0;
+    	empty-cells: show;
+	    border: 1px solid #CCCCCC;
+	    margin: 10px;
+		tr {
+			td, th {
+				padding: 0.5em;
+				vertical-align: middle;
+				text-align: center;
+				input {
+					transform: scale(1.5);
+					box-shadow: none;
+				}
+			}
+			&:nth-child(2n) {
+				background: #FFFFFF;
+			}
+			&:nth-child(2n+1) {
+				background: #F0F0F0;
+			}
+		}
+	}
+	.actions {
+		padding: 10px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #F5F5F5;
+		border-top: 1px solid #CCC;
+		border-radius: 0 3px 3px 0;
+		display: flex;
+		input[type=submit], a, button {
+			box-sizing: border-box;
+			color: #FFFFFF;
+			background: #168A94;
+			border: #EEE;
+			padding: 7px 15px;
+			margin: 0 10px 0 0;
+			border-radius: 2px;
+			font-size: 16px;
+			display: block;
+		}
+	}
+}
+
+.rTable {
+  display: table;
+
+  .rTableRow       { display: table-row; }
+  .rTableHeading    { display: table-header-group; }
+  .rTableBody    { display: table-row-group; }
+  .rTableFoot    { display: table-footer-group; }
+  .rTableCell, .rTableHead  { display: table-cell; }
+}
