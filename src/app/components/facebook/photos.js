@@ -1,16 +1,6 @@
 import React from "react";
 import LazyLoad from 'react-lazy-load';
 
-class LoadSpiner extends React.Component{
-  render() {
-    return (
-      <div>
-        <p>loading...</p>
-      </div>
-    )
-  }
-}
-
 export default class FBContent extends React.Component{
 
   constructor(props){
@@ -19,7 +9,7 @@ export default class FBContent extends React.Component{
   }
 
   handleClick(){
-    FB.logout(function(response) {
+    FB.logout(function() {
       this.props.history.go('/facebook')
     }.bind(this));
   }

@@ -64,11 +64,6 @@ const GoogleMapContent = class extends React.Component {
     )
   }
 
-  handleMarkerRightclick(index, event){
-    // let {markers} = this.state;
-    // this.setState({ markers: markers.splice(index,1) && markers });
-  }
-
   render () {
     let _style = {
       height: '600px'
@@ -92,12 +87,9 @@ const GoogleMapContent = class extends React.Component {
               defaultCenter={{lat: 53.676507, lng: 23.839601}}
               onRightclick={this.handleMapRightClick.bind(this)}
             >
-              {this.props.waypoints.map((waypoint, index) => {
+              {this.props.waypoints.map((waypoint) => {
                 return (
-                  <Marker
-                    {...waypoint}
-                    // onRightclick={this.handleMarkerRightclick.bind(this, index)}
-                  />
+                  <Marker {...waypoint} />
                 );
               })}
               {directions ? <DirectionsRenderer directions={directions} /> : null}
