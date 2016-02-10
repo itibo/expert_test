@@ -5,6 +5,7 @@ export default class ImportSystem extends React.Component{
     let system = this.state.text;
     global.localStorage.setItem("ExpertSystem", system);
     window.location.href = "#/systems/using";
+//    this.props.history.push('systems');
   }
 
   textChange(e) {

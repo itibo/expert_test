@@ -2,7 +2,7 @@ import React from "react";
 
 export default class ExportSystem extends React.Component{
   render() {
-    let expertSystem = global.localStorage.getItem("ExpertSystem");
+    let expertSystem = global.localStorage.getItem("systems");
 
     return (
       <div className="panel">

@@ -162,8 +162,6 @@ export default class GoogleMapPage extends React.Component {
           travelMode: google.maps.TravelMode.DRIVING
         }, _waypoints.length ? {waypoints: _waypoints} : {})
 
-        console.log("_directions_ervice_params: %O", _directions_ervice_params)
-
         this.DirectionsService.route(_directions_ervice_params,
           (result, status) => {
             if(status == google.maps.DirectionsStatus.OK) {

@@ -8,6 +8,11 @@ import { Router, Route }    from 'react-router';
 
 import App  				from './components/app';
 import Home  				from './components/home';
+import ExpertSystems from './components/systems';
+import ExpertSystemItem from './components/systems/item';
+import ExpertSystemUsing from './components/systems/system_using';
+
+
 import SystemsNew			from './components/systems/new';
 import SystemsImport		from './components/systems/import';
 import SystemsExport		from './components/systems/export';
@@ -63,10 +68,16 @@ class PhonegapApp {
             <Router>
                 <Route path="/" component={App}>
                     <Route path="home" component={Home} />
-                    <Route path="systems/new"  component={SystemsNew} />
+										<Route path="systems" component={ExpertSystems} />
+										<Route path="system/:sysId" component={ExpertSystemItem} />
+										<Route path="systems/new" component={ExpertSystemItem} />
+										<Route path="system/:sysId/using" component={ExpertSystemUsing} />
+
+                    {/*<Route path="systems/new"  component={SystemsNew} />*/}
                     <Route path="systems/import" component={SystemsImport} />
                     <Route path="systems/export" component={SystemsExport} />
-                    <Route path="systems/using" component={SystemsUsing} />
+										{/*<Route path="systems/using" component={SystemsUsing} />*/}
+
 										<Route path="facebook" getComponent={(location, cb) => {
 											FB.getLoginStatus((response) => {
 												if ('connected' == response.status){
