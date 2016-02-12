@@ -45,7 +45,8 @@ module.exports = {
                 include: path.join(__dirname, 'src')
             }, {
                 test: /\.scss$/,
-                loader: DEBUG ? scssStyles : ExtractTextPlugin.extract("style-loader", "css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!sass-loader")
+                // ?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]
+                loader: DEBUG ? scssStyles : ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!sass-loader")
             }
         ]
     },
